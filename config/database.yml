@@ -1,0 +1,19 @@
+default: &default
+  adapter: postgresql
+  encoding: utf8
+  timeout: 5000
+  pool: <%= ENV["DB_POOL"] || ENV['MAX_THREADS'] || 5 %>
+
+development:
+  <<: *default
+  host: localhost
+  database: rsvp_development
+
+test:
+  <<: *default
+  host: localhost
+  database: rsvp_test
+
+production:
+  <<: *default
+  url:  <%= ENV["DATABASE_URL"] %>

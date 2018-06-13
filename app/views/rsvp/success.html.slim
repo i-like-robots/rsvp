@@ -1,0 +1,24 @@
+- content_for(:page_title, 'RSVP complete')
+
+div.Layout
+
+  - flash.each do |name, message|
+    p.Layout-notice.Notice class="Notice--#{name}" = message
+
+  h1.Layout-heading RSVP complete
+
+  div.Layout-content
+
+    p
+      | Thank you for your RSVP!
+
+    p
+      | Weʼve sent you an email and a text message with confirmation.
+
+    p
+      | We will keep you up-to-date with our plans as they develop so if your details change please let us know.
+
+    p
+      | The Bride and Groom
+
+  a.Button href="https://#{ENV['APP_DOMAIN']}" Return to the main website

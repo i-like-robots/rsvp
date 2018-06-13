@@ -1,0 +1,43 @@
+.Button {
+  display: inline-block;
+  padding: 0.5rem 0.75rem;
+  font: inherit;
+  text-decoration: none;
+  border: 2px solid $palette-gold;
+  border-radius: 0;
+  background: transparent;
+  color: inherit;
+  transition: 0.5s all;
+
+  &:hover {
+    background: $palette-mid-blue;
+    color: $palette-white;
+    border-color: $palette-gold;
+  }
+}
+
+.Button--next {
+  &::after {
+    content: ' »';
+    speak: none;
+    margin-left: 0.125rem;
+  }
+}
+
+.Button--back {
+  &::before {
+    content: '« ';
+    speak: none;
+    margin-left: 0.125rem;
+  }
+}
+
+.Button--cancel {
+  color: $palette-white;
+  background: $palette-notice-error;
+}
+
+.Button--proceed {
+  color: $palette-white;
+  background: $palette-notice-success;
+}

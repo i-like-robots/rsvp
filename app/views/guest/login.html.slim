@@ -1,0 +1,20 @@
+- content_for(:page_title, 'Guest log in')
+
+div.Layout
+
+  - flash.each do |name, message|
+    p.Layout-notice.Notice class="Notice--#{name}" = message
+
+  h1.Layout-heading Guest log in
+
+  div.Layout-content
+    p If you need to update any of your details enter your mobile number below and we'll text you a code to confirm on the next page.
+
+  = form_tag({ action: 'submit' }, { class: 'Form' }) do |f|
+
+    div.Form-field.Form-field--name
+      = label_tag(:phone_number, 'Phone number', class: 'Form-label')
+      = phone_field_tag(:phone_number, nil, required: true, class: 'Form-input Input')
+
+    div.Form-field.Form-field--submit
+      = button_tag('Next', class: 'Form-submit Button Button--next')

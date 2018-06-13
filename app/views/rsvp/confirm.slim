@@ -1,0 +1,31 @@
+- content_for(:page_title, 'Confirm RSVP')
+
+div.Layout
+
+  - flash.each do |name, message|
+    p.Layout-notice.Notice class="Notice--#{name}" = message
+
+  h1.Layout-heading Confirm RSVP
+
+  div.Layout-content
+    p Please check your details carefully below then click the button to confirm your RSVP. If your details are not correct you may go back and edit them.
+
+    p Youʼll be able to come back and update your details should they change in future.
+
+  div.Confirm
+
+    dl.Confirm-list
+      dt.Confirm-item Your name
+      dd.Confirm-value = @guest.name
+      dt.Confirm-item Phone number
+      dd.Confirm-value = @guest.phone_number
+      dt.Confirm-item Email address
+      dd.Confirm-value = @guest.email
+      dt.Confirm-item Your guestʼs name (+1)
+      dd.Confirm-value = @guest.plus_one.presence ? @guest.plus_one : 'No guest'
+
+    p.Confirm-question Are these details correct?
+
+    div.Confirm-answers
+      =<> link_to('No', { controller: 'rsvp', action: 'index' }, class: 'Button Button--back Button--cancel')
+      =<> link_to('Yes', { controller: 'rsvp', action: 'verify' }, class: 'Button Button--next Button--proceed')

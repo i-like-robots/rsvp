@@ -1,0 +1,25 @@
+- content_for(:page_title, 'Confirm code')
+
+div.Layout
+
+  - flash.each do |name, message|
+    p.Layout-notice.Notice class="Notice--#{name}" = message
+
+  h1.Layout-heading Confirm code
+
+  div.Layout-content
+    p Weʼve sent you a text with a 6 digit code which you should enter in the field below.
+
+    p
+      | If you haven't received the text (it may take a minute!) please
+      =< link_to('try again', { controller: 'guest', action: 'confirm' })
+      | .
+
+  = form_tag({ action: 'verify' }, { class: 'Form' }) do |f|
+
+    div.Form-field.Form-field--name
+      = label_tag(:code, 'Code', class: 'Form-label')
+      = number_field_tag(:code, nil, required: true, class: 'Form-input Input')
+
+    div.Form-field.Form-field--submit
+      = button_tag('Log in', class: 'Form-submit Button Button--next')

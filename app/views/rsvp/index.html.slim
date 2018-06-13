@@ -1,0 +1,40 @@
+- content_for(:page_title, 'New RSVP')
+
+div.Layout
+
+  - flash.each do |name, message|
+    p.Layout-notice.Notice class="Notice--#{name}" = message
+
+  h1.Layout-heading New RSVP
+
+  div.Layout-content
+    p
+      | To submit a new RSVP please fill in the form below. Alternatively, if you've already sent us your RSVP you can
+      =<> link_to('update your details', { controller: 'guest', action: 'login' })
+
+  = form_for(@guest, url: { action: 'submit' }, html: { class: 'Form' }) do |f|
+
+    div.Form-field.Form-field--name
+      = f.label(:name, 'Your name', class: 'Form-label')
+      = f.text_field(:name, required: true, class: 'Form-input Input')
+
+    div.Form-field.Form-field--phone
+      = f.label(:phone_number, 'Phone number', class: 'Form-label')
+      = f.phone_field(:phone_number, required: true, class: 'Form-input Input')
+      p.Form-detail
+        | Weʼll need this to keep in touch with you
+
+    div.Form-field.Form-field--email
+      = f.label(:email, 'Email address', class: 'Form-label')
+      = f.email_field(:email, required: true, class: 'Form-input Input')
+      p.Form-detail
+        | Weʼd like to email you updates as our plans develop
+
+    div.Form-field.Form-field--guest
+      = f.label(:plus_one, 'Your guestʼs name', class: 'Form-label')
+      = f.text_field(:plus_one, class: 'Form-input Input')
+      p.Form-detail
+        | If you plan to bring a +1 with you, please enter their name here
+
+    div.Form-field.Form-field--submit
+      = f.button('Next', class: 'Form-submit Button Button--next')

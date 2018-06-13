@@ -1,0 +1,22 @@
+.Form {}
+
+.Form-field {
+  & + & {
+    margin-top: 2rem;
+  }
+}
+
+.Form-label {
+  display: block;
+  margin: 0 0 0.5rem;
+}
+
+.Form-input {
+  width: 100%;
+}
+
+.Form-detail {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  color: $palette-mid-gray;
+}

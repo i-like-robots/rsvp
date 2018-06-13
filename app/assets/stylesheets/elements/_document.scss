@@ -1,0 +1,24 @@
+body {
+  font: 500 1.125rem/1.25 EB Garamond;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  color: $palette-dark-gray;
+  background:$palette-light-gray image-url('background.jpg') repeat;
+}
+
+:focus {
+  outline: thin dotted;
+  outline-offset: 1px;
+}
+
+a {
+  color: $palette-mid-blue;
+  text-decoration: none;
+  border-bottom: 1px solid $palette-gold;
+  transition: 0.5s all;
+
+  &:hover {
+    color: $palette-dark-blue;
+    border-bottom-color: $palette-dark-blue;
+  }
+}

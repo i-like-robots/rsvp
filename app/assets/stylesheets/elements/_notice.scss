@@ -1,0 +1,23 @@
+.Notice {
+  padding: 1rem;
+  border: 2px solid;
+  border-radius: 2px;
+}
+
+.Notice--error {
+  color: $palette-notice-error;
+  border-color: mix($palette-white, $palette-notice-error, 20%);
+  background: mix($palette-white, $palette-notice-error, 80%);
+}
+
+.Notice--warning {
+  color: $palette-notice-warning;
+  border-color: mix($palette-white, $palette-notice-warning, 20%);
+  background: mix($palette-white, $palette-notice-warning, 80%);
+}
+
+.Notice--success {
+  color: $palette-notice-success;
+  border-color: mix($palette-white, $palette-notice-success, 20%);
+  background: mix($palette-white, $palette-notice-success, 80%);
+}

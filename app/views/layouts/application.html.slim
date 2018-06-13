@@ -1,0 +1,21 @@
+doctype html
+html.no-js
+  head
+
+    meta charset='utf-8'
+    meta name='theme-color' content='#D9C6B1'
+    meta name='viewport' content='width=device-width, initial-scale=1.0'
+
+    title
+      = yield(:page_title)
+      = " | #{ENV['APP_NAME']}"
+
+    = stylesheet_link_tag('application', media: 'all')
+    link rel='stylesheet' href='//fonts.googleapis.com/css?family=EB+Garamond'
+    = javascript_include_tag('application')
+    = csrf_meta_tags
+
+  body
+
+    main role='main'
+      == yield

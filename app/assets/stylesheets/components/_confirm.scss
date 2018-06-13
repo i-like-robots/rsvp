@@ -1,0 +1,33 @@
+.Confirm {}
+
+.Confirm-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.Confirm-item,
+.Confirm-value {
+  width: 50%;
+  margin: 0 0 0.5rem;
+}
+
+.Confirm-item {
+  font-weight: bold;
+}
+
+.Confirm-value {
+  &::before {
+    content: ' ';
+  }
+}
+
+.Confirm-question {
+  margin: 2rem 0 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.Confirm-answers {
+  text-align: center;
+}

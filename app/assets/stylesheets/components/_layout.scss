@@ -1,0 +1,31 @@
+.Layout {
+  max-width: 30rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+.Layout-notice {
+  margin: 0 0 2rem;
+}
+
+.Layout-heading {
+  margin: 0 0 2rem;
+  font-size: 3rem;
+  line-height: 1;
+  color: $palette-mid-gray;
+  text-shadow: 0 1px 0 $palette-white;
+}
+
+.Layout-content {
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 3px double $palette-mid-gray;
+
+  p {
+    margin: 0;
+
+    + p {
+      margin-top: 1rem;
+    }
+  }
+}
