@@ -37,7 +37,7 @@ group :development, :test do
   gem 'capybara'
 
   # Use Factory Girl for database fixtures
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
 
 end
 

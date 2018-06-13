@@ -75,10 +75,10 @@ GEM
       railties (>= 3.2, < 6.0)
     erubis (2.7.0)
     execjs (2.7.0)
-    factory_girl (4.9.0)
+    factory_bot (4.10.0)
       activesupport (>= 3.0.0)
-    factory_girl_rails (4.9.0)
-      factory_girl (~> 4.9.0)
+    factory_bot_rails (4.10.0)
+      factory_bot (~> 4.10.0)
       railties (>= 3.0.0)
     faraday (0.15.2)
       multipart-post (>= 1.2, < 3)
@@ -233,7 +233,7 @@ DEPENDENCIES
   bcrypt (~> 3.1.12)
   capybara
   dotenv-rails
-  factory_girl_rails
+  factory_bot_rails
   pg (~> 0.15.0)
   pry
   puma (~> 3.11.4)
