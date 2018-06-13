@@ -1,6 +1,6 @@
 # Wedding RSVP App
 
-This is an application I built for a friend's wedding to collect guest's RSVPs and contact details. It is built using [Ruby on Rails] with SMS and email functionality provided by [Twilio] and [SendGrid], and an admin dashboards provided by [Administrate].
+This is an application I built for a friend's wedding to collect guest's RSVPs and contact details. It is built using [Ruby on Rails] with SMS and email functionality provided by [Twilio] and [SendGrid]. The admin dashboards were created using the [Administrate] Gem.
 
 [Ruby on Rails]: https://rubyonrails.org/
 [Twilio]: https://www.twilio.com/
@@ -9,8 +9,8 @@ This is an application I built for a friend's wedding to collect guest's RSVPs a
 
 ## Features
 
-- Guests registration with confirmation via SMS
-- Guests can update their details with login codes sent via SMS
+- Simple guest registration with confirmation via SMS
+- Guests may update their details at any time with login codes sent via SMS
 - Manage guests with the included administration dashboard
 - Send email notifications to guests
 
