@@ -38,3 +38,9 @@ bundle exec rake db:setup
 # Run the development server
 bundle exec rails s
 ```
+
+## Screenshots
+
+<img alt="" src="https://user-images.githubusercontent.com/271645/41441093-17c4dd54-7029-11e8-8dab-de4107626191.png">
+<img alt="" src="https://user-images.githubusercontent.com/271645/41441094-17e2927c-7029-11e8-9191-9fd36dbeadf9.png">
+<img alt="" src="https://user-images.githubusercontent.com/271645/41441095-17fbf35c-7029-11e8-9d14-64488f400865.png">
